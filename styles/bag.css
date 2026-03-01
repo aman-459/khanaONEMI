@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bag-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+}
+
+.bag-card {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    width: 50vw;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    position: relative;
+}
+
+.bag-card img {
+    box-sizing: content-box;
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.bag-card .text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bag-card i {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 20px;
+    color: #333;
+    cursor: pointer;
+    font-weight: 700;
+}
+
+.bag-bill {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 30vw;
+    height: 200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+    padding: 20px;
+}
+
+.bag-bill button {
+    width: 100%;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
