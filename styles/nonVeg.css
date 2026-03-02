@@ -1,0 +1,53 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.nonVeg-cards {
+  display: flex;
+  gap: 20px;
+  margin: 20px 40px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.nonVeg-cards .nonVeg-card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.nonVeg-card img {
+  display: flex;
+  width: 95%;
+  height: 200px;
+  border-radius: 5px;
+  margin: auto;
+}
+
+.nonVeg-card img:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+.nonVeg-card p {
+  margin: 4px 0px;
+}
+
+.nonVeg-card button {
+  margin: 5px 0px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.nonVeg-card .add-to-cart {
+  background-color: rgb(241, 170, 36);
+}
+
+.nonVeg-card .order-now {
+  background-color: rgb(87, 171, 87);
+}
