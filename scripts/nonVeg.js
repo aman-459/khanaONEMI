@@ -1,8 +1,27 @@
  
 
 let nonVeg;
-getNonVeg(items);
-displayNonVeg();
+let bagItems;
+onLoad();
+function onLoad() {
+    getNonVeg(items);
+    displayNonVeg();
+    let bagItemsStr = localStorage.getItem('bagItems');
+    console.log(bagItemsStr);
+    bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
+    displayAddToCartIcon();
+}
+
+function displayAddToCartIcon() {
+    let icon = document.querySelector('sup');
+    icon.innerHTML = bagItems.length;
+}
+
+function addToCart(itemId) {
+    bagItems.push(itemId);
+    localStorage.setItem('bagItems', JSON.stringify(bagItems));
+    displayAddToCartIcon();
+}
 
 
 

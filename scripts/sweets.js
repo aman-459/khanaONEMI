@@ -1,9 +1,29 @@
  
 
 let sweets;
-getSweets(items);
-displaysweets();
+let bagItems;
 
+onLoad();
+
+function onLoad() {
+    getSweets(items);
+    displaysweets();
+    let bagItemsStr = localStorage.getItem('bagItems');
+    bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
+    console.log(bagItemsStr);
+    displayAddToCartIcon();
+}
+
+function displayAddToCartIcon() {
+    let icon = document.querySelector('sup');
+    icon.innerHTML = bagItems.length;
+}
+
+function addToCart(itemId) {
+    bagItems.push(itemId);
+    localStorage.setItem('bagItems', JSON.stringify(bagItems));
+    displayAddToCartIcon();
+}
 
 
 function getSweets(items) {

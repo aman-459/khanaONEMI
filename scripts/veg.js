@@ -1,13 +1,32 @@
  
-
 let veg;
-getVeg(items);
-displayVeg();
+let bagItems;
+onload();
+
+function onload() {
+    getVeg(items);
+    displayVeg();
+    let bagItemsStr = localStorage.getItem('bagItems')
+    bagItems = bagItemsStr ? JSON.parse(bagItemsStr) : [];
+    console.log(bagItemsStr);
+    displayAddToCartIcon();
+}
 
 
 
 function getVeg(items) {
     veg= items.filter(item => item.type == "Veg");
+}
+
+function displayAddToCartIcon() {
+    let icon = document.querySelector("sup");
+    icon.innerHTML = bagItems.length;
+}
+
+function addToCart(itemId) {
+    bagItems.push(itemId);
+    localStorage.setItem('bagItems', JSON.stringify(bagItems));
+    displayAddToCartIcon();
 }
 
 function generateVegElement(item) {
